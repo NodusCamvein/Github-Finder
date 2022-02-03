@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import About from './components/pages/About';
 import Alert from './components/layout/Alert';
 import AlertState from './context/alert/AlertState';
@@ -19,12 +19,12 @@ const App = () => {
             <Navbar />
             <div className='container'>
               <Alert />
-              <Switch>
+              <Route>
                 <Route component={NotFound} />
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path={`/user/:login`} component={User} />
-              </Switch>
+              </Route>
             </div>
           </div>
         </Router>

@@ -1,11 +1,11 @@
 import { CLEAR_USERS, SEARCH_USERS, SET_LOADING } from '../../context/types';
 import { searchUsers } from '../../context/github/actions';
 import AlertContext from '../../context/alert/alertContext';
-import GithubContext from '../../context/github/gitHubContext';
+import githubContext from '../../context/github/gitHubContext';
 import React, { useState, useContext } from 'react';
 
 const Search = () => {
-  const { dispatch, users } = useContext(GithubContext);
+  const { dispatch, users } = useContext(githubContext);
   const { setAlert } = useContext(AlertContext);
 
   const [text, setText] = useState('');

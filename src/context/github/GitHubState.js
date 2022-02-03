@@ -1,4 +1,4 @@
-import GithubContext from './gitHubContext';
+import githubContext from './gitHubContext';
 import githubReducer from './gitHubReducer';
 import React, { useReducer } from 'react';
 
@@ -12,9 +12,9 @@ const GithubState = (props) => {
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
   return (
-    <GithubContext.Provider value={{ ...state, dispatch }}>
+    <githubContext.Provider value={{ ...state, dispatch }}>
       {props.children}
-    </GithubContext.Provider>
+    </githubContext.Provider>
   );
 };
 
